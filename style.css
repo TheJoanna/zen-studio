@@ -1,0 +1,216 @@
+/*  NOTES
+- fonts:
+    - Didot - Regular (headings)
+    - Baskerville - Regular (body text)
+    - Proxima Nova - Links and specific elements.
+- Colors:
+    - beige - F8F6F4
+    - pink - FFA995
+- Map: [https://snazzymaps.com/style/115413/light-and-beige](https://snazzymaps.com/style/115413/light-and-beige)
+
+- change the fonts
+- change the bg images
+- typography styles
+    - general styles
+    - featured text (changing color fo the text)
+    - font-size
+- button styles
+- image styles
+*/
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img     { max-width: 100%; }
+
+/*  Start Temporary Styles */
+/* * {
+    padding: 0.5rem;
+    border: 2px solid rgb(200,200,200);
+} */
+
+/* html, 
+body {
+    border: none;
+} */
+
+/* h1,h2,h3,h4,h5,h6,p, a {
+    border: 2px solid rgb(179, 84, 84);
+} */
+/*  End Temporary Styles */
+
+/* Re-usable Utiity Classes  */
+
+.tall-50 { min-height: 50vh; }
+.tall-60 { min-height: 60vh; }
+.tall-70 { min-height: 70vh; }
+.tall-80 { min-height: 80vh; }
+.tall-90 { min-height: 90vh; }
+
+
+.padded         { padding: 5%;    }
+
+.padded-1,
+.grid.padded-1  { padding: 1rem;  }
+
+.padded-2,
+.grid.padded-2  { padding: 2rem;  }
+
+.margin-b-0     { margin-bottom: 0; }
+
+
+.bg-light       { background-color: #F8F6F4;  } 
+.bg-featured    { background-color: #018ca2;  }
+
+.text-featured  { color: #f59186; }
+
+.left           { text-align: left; }
+.center         { text-align: center; }
+.right          { text-align: right; }
+
+
+/* General typography & universal styles  */
+body {
+    font-family: 'Libre Baskerville', serif;
+    color: rgb(65,60,60);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Didot', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+h1      { font-size: 3rem;}
+h2      { font-size: 2.5rem;}
+h3      { font-size: 2rem;}
+
+p, li {
+    line-height: 1.4;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+ul      { margin-left: 1rem;    }
+li      { padding-left: 0.5rem; }
+
+
+h1:last-child, 
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child, 
+p:last-child {
+    margin-bottom: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: grey;
+}
+
+.text-lg        { font-size: 3.5rem;  }
+.text-xl        { font-size: 4.5rem;  }
+.text-xxl       { font-size: 8.5rem;  }
+
+.text-lato { 
+    font-family: 'Lato', sans-serif; 
+    font-weight: 300;
+    color: #e37165;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.button { 
+    color: inherit; 
+    border: 1px solid #f59186;
+    border-radius: 2rem;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    display: inline-block;
+}
+
+/* Header & Footer */
+
+footer {
+    padding-bottom: 2rem;
+    color: rgb(140,140,140);
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+}
+
+footer p {
+    font-size: 0.8rem;
+}
+
+/* Images & Background Images */
+
+.bg-image {
+    background-size: cover;
+    background-position: center; 
+    background-image: url(/images/zen-studio-1.jpg)
+}
+
+.bg-leaves { 
+    background-image: url(/images/zen-studio-1.jpg); 
+    background-position: 50% 30%;     
+}
+
+.bg-stone       { background-image: url(/images/stone.jpg);             }
+.bg-venue       { background-image: url(/images/zen-studio-3.jpg);      }
+.bg-map         { background-image: url(/images/light-colored-map.jpg); }
+
+.shape-teardrop {
+    border-radius: 20rem; 
+    border-bottom-right-radius: 0;
+}
+
+.shape-window {
+    border-top-left-radius: 20rem;
+    border-top-right-radius: 20rem;
+}
+
+/* Gridlex Media Queries */
+    /* @media (max-width: 36em)	Max 576px	_xs-* */
+    /* @media (max-width: 48em)	Max 768px	_sm-* */
+    /* @media (max-width: 64em)	Max 1024px	_md-* */
+    /* @media (max-width: 80em)	Max 1280px	_lg-*  
+*/
+
+/* SM media query max 768px */
+@media(max-width: 48em) {
+    .text-xxl   { font-size: 6.5rem; }
+    .text-xl    { font-size: 3.5rem; }
+    .sm-block   { display: block; }
+    .bg-leaves { 
+        background-image: url(/images/leaves-light.jpg);  }
+    .text-center-sm { text-align: center; }    
+}
+
+/* XS media query max 576px */
+@media(max-width: 36em) {
+    .text-xxl { font-size: 4.5rem; }
+    .text-xl  { font-size: 2.5rem; }
+    .text-lg  { font-size: 2.5rem; }
+}
+
+/* XXS media query max 350px */
+@media(max-width: 25em) {
+    .text-xxl { font-size: 2.5rem;
+
+    }
+}
